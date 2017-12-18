@@ -8,7 +8,18 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
-var app = express();
+var app = express(),
+    http = require('http');
+
+http.createServer((request, response) => {
+    response.writeHead(200, {
+       'content-type': 'text/html; charset=utf-8'
+    })
+    
+    response.end('coucou')
+    
+}).listen(8080)
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -44,3 +55,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
