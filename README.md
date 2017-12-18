@@ -1,2 +1,0 @@
-# SmartCalendar
-Interactive Calendar
