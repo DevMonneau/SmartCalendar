@@ -1,0 +1,16 @@
+{
+  "server":
+  {
+    "port": 8080,
+    "requestSizeLimit": "50mb"
+  },
+  "mongo":
+  {
+    "url": "mongodb://localhost:27017/smartCalendar",
+    "secret": "bite",
+    "user" : "",
+    "password" : "",
+    "debug" : true,
+    "poolSize" : 20
+  }
+}

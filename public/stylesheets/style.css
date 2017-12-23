@@ -1,8 +1,40 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html {
+    font: 14px "Work sans";
+    background: rgba(53, 62, 79, 1);
 }
 
-a {
-  color: #00B7FF;
+
+body {
+    background: rgba(53, 62, 79, 1);
 }
+
+#main-title{
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+}
+
+input {
+    background-color: rgb(49, 59, 72);
+    display: inline-block;
+    color: white;
+    width: 200px;
+    height: 20px;
+}
+
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
