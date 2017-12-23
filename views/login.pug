@@ -1,12 +1,17 @@
 extends shared/layout
 
 block content
-	h1(id="main-title") SmartCalendar
-		form(class='form-signin', action='/login', method='POST')
-			input(type='text', name='username' class='form-control', placeholder='Email',required, autofocus)
-			br
-			input(type='password', name='password' class='form-control', placeholder='Password', required)
-			br
-			button(class='btn btn-lg btn-primary btn-block', type='submit') Sign in
-			span.clearfix
-	a(href='/signup', class='text-center new-account') Create an account
+    h1(id="main-title") SmartCalendar
+    form(class='inputlog', action='/login', method='POST')
+        .logbar
+            i.fa.fa-user.loginicon
+            input.inputhome(type='text', name='username' class='form-control', placeholder='Email', required, autofocus)
+        .logbar
+            i.fa.fa-lock.loginicon(id='scd_icon')
+            input.inputhome(type='password', name='password' class='form-control', placeholder='Password', required)
+        .log-btn
+            button(class='btn btn-lg btn-primary btn-block btn-log sublog', type='submit') Connection
+    span.clearfix
+    button(class='btn btn-lg btn-primary btn-block sublog', onclick="window.location.href = '/signup'", id="createaccount") Créer un compte
+
+    script

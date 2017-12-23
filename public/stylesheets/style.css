@@ -5,21 +5,55 @@ html {
 
 
 body {
-    background: rgba(53, 62, 79, 1);
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 #main-title{
     color: white;
     text-align: center;
-    margin-top: 5%;
+    margin: 10% auto;
 }
 
-input {
-    background-color: rgb(49, 59, 72);
-    display: inline-block;
+.loginicon {
+    font-size: 25px !important;
+    margin-right: 10px;
     color: white;
-    width: 200px;
-    height: 20px;
+}
+
+.logbar {
+    width: auto;
+    height: auto;
+    margin: 11px 708px;
+    position: relative;
+}
+
+.btn-log {
+    position: relative;
+}
+
+.sublog {
+    width: 300px !important;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.log-btn {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.btn-block {
+    display: inline-block !important;
+    width: 200px !important;
+    margin-top: 6px !important;
+    margin-right: 5px !important;
+    margin-left: 5px !important;
 }
 
 .navbar {
@@ -38,3 +72,30 @@ input {
     font-size: 17px;
 }
 
+.inputhome {
+    margin: auto;
+    width: 89% !important;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: rgb(49, 59, 72);
+    border: 1px solid slategrey;
+    border-radius: 11px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    display: inline-block !important;
+    /* margin-right: 20px; */
+}
+
+#scd_icon {
+    margin-right: 12px;
+}
+
+.new-account {
+    text-align: center;
+}
