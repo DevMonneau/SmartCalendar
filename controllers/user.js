@@ -2,12 +2,12 @@ const passport = require('passport')
 
 module.exports = function(app) {
 
-	app.get('/', function(req, res) {
+	app.get('/login', function(req, res) {
 		res.render('login', { message: req.flash('message') })
 	})
 
 	/* POST login */
-	app.post('/', passport.authenticate('login', {
+	app.post('/login', passport.authenticate('login', {
 		successRedirect: '/',
 		failureRedirect: '/signup',
 		failureFlash : true
