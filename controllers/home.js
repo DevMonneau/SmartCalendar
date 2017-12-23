@@ -1,4 +1,4 @@
-const ensureLoggedIn = require('../authentication/middleware').ensureLoggedIn
+const ensureLoggedIn = require('../app/authentication/middleware').ensureLoggedIn
 
 module.exports = function(app) {
 

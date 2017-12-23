@@ -9,8 +9,8 @@ const logger = require('../configuration/logger/logger')
 const passport = require('passport')
 const session = require('express-session')
 const flash = require('connect-flash');
-const homeController = require('./controllers/home')
-const userController = require('./controllers/user')
+const homeController = require('../controllers/home')
+const userController = require('../controllers/user')
 
 const REQUEST_SIZE_LIMIT = configuration.server.requestSizeLimit
 const app = express()

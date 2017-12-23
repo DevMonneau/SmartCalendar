@@ -2,5 +2,7 @@
 npm-debug.log*
 node_modules
 .npm
+#*#
+*~
 jspm_packages
 .lock-wscript
