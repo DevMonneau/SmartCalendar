@@ -2,6 +2,7 @@
 npm-debug.log*
 node_modules
 .npm
+package-lock.json
 #*#
 *~
 jspm_packages
