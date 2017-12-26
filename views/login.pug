@@ -1,17 +1,23 @@
 extends shared/layout
 
 block content
-    h1(id="main-title") SmartCalendar
-    form(class='inputlog', action='/login', method='POST')
-        .logbar
-            i.fa.fa-user.loginicon
-            input.inputhome(type='text', name='username' class='form-control', placeholder='Email', required, autofocus)
-        .logbar
-            i.fa.fa-lock.loginicon(id='scd_icon')
-            input.inputhome(type='password', name='password' class='form-control', placeholder='Password', required)
-        .log-btn
-            button(class='btn btn-lg btn-primary btn-block btn-log sublog', type='submit') Connection
-    span.clearfix
-    button(class='btn btn-lg btn-primary btn-block sublog', onclick="window.location.href = '/signup'", id="createaccount") Créer un compte
+    .row
+        .col-sm-6(style="top: 20%")
+            h1(id="main-title") SmartCalendar
+            p.log-content SmartCalendar est un calendrier qui vous permet d'organiser vos rendez-vous intelligement.
+            br
+            br
+            p.log-content Il sera ainsi possible pour vous d'utiliser notre système de rappel par mail ou sms.
+            button(class='btn btn-lg btn-primary btn-block sublog', onclick="window.location.href = '/signup'", id="createaccount") Créer un compte
 
-    script
+        .col-sm-6(style="top: 45%")
+            form(class='inputlog', action='/login', method='POST')
+                .logbar
+                    i.fa.fa-user.loginicon
+                    input.inputhome(type='text', name='username' class='form-control', placeholder='Email', required, autofocus)
+                .logbar
+                    i.fa.fa-lock.loginicon(id='scd_icon')
+                    input.inputhome(type='password', name='password' class='form-control', placeholder='Password', required)
+                .log-btn
+                    button(class='btn btn-lg btn-primary btn-block btn-log sublog', type='submit') Connection
+            span.clearfix

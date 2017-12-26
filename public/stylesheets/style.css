@@ -1,15 +1,19 @@
 html {
     font: 14px "Work sans";
-    background: rgba(53, 62, 79, 1);
 }
-
 
 body {
     top: 0;
     position: absolute;
     width: 100%;
     height: 100%;
+    background: -webkit-linear-gradient(left, #141E30, rgba(36, 59, 85, 0.95) 74%);
+    background: linear-gradient(to right, #141E30, rgba(36, 59, 85, 0.95) 74%);
+    background: -moz-linear-gradient(#141E30, rgba(36, 59, 85, 0.95) 74%);
+    background: -o-linear-gradient(#141E30, rgba(36, 59, 85, 0.95) 74%);
+    background: -ms-linear-gradient(#141E30, rgba(36, 59, 85, 0.95) 74%);
 }
+
 
 #main-title{
     color: white;
@@ -23,10 +27,19 @@ body {
     color: white;
 }
 
+.inputhome {
+    width: 200px !important;
+    display: inline-block !important;
+    position: relative !important;
+    height: 35px !important;
+    margin: auto !important;
+    background-color: #28384D;
+    color: #363E4F;
+}
+
 .logbar {
     width: auto;
     height: auto;
-    margin: 11px 708px;
     position: relative;
 }
 
@@ -63,39 +76,17 @@ body {
     width: 100%;
 }
 
-.navbar a {
-    float: left;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+
+
+
+
+.log-content {
+    font-size: 15px;
+    color: white;
 }
 
-.inputhome {
-    margin: auto;
-    width: 89% !important;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: rgb(49, 59, 72);
-    border: 1px solid slategrey;
-    border-radius: 11px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    display: inline-block !important;
-    /* margin-right: 20px; */
-}
-
-#scd_icon {
-    margin-right: 12px;
-}
-
-.new-account {
+.row {
+    width: 100%;
+    height: 100%;
     text-align: center;
 }
