@@ -6,10 +6,3 @@ body {
   width: 100%;
   position: absolute;
 }
-
-#connection {
-  height: 100%;
-  background-color: aqua;
-  width: 100%;
-  position: relative;
-}

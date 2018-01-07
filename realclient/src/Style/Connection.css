@@ -8,3 +8,8 @@
     background: -o-linear-gradient(bottom, rgba(22,30,47,1) 0%, rgba(51,69,91,1) 100%);
     background: -ms-linear-gradient(bottom, rgba(22,30,47,1) 0%, rgba(51,69,91,1) 100%);
 }
+
+.Home h2, #register h2 {
+    text-align: center;
+    color: white;
+}
