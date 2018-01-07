@@ -6,5 +6,5 @@ import Test from './Test';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<Test />, document.getElementById('Test'));
+ReactDOM.render(<Test />, document.getElementById('test'));
 registerServiceWorker();
