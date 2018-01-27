@@ -10,20 +10,27 @@ var User = require('./models/user');
 // Use body-parser to get POST requests for API use
 app.use(bodyParser.urlencoded({ extended: false }));  
 app.use(bodyParser.json());
+app.use((req, res, next) => {
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+	res.setHeader('Access-Control-Allow-Credentials', true);
+});
 
 // Log requests to console
 app.use(morgan('dev'));  
 
 app.use(passport.initialize()); 
-require('./config/passport')(passport); 
+require('./config/passport')(passport);
 
 // Home route. We'll end up changing this to our main front end index later.
 app.get('/', function(req, res) {  
   res.send('Relax. We will put the home page here later.');
 });
 
-var apiRoutes = express.Router();  
-// Register new users
+// Set url for API group routes
+var apiRoutes = express.Router(); 
+
 apiRoutes.post('/register', function(req, res) {  
   if(!req.body.email || !req.body.password) {
     res.json({ success: false, message: 'Please enter email and password.' });
@@ -59,7 +66,7 @@ apiRoutes.post('/authenticate', function(req, res) {
           var token = jwt.sign(user.toJSON(), 'louislebg', {
             expiresIn: 10080 // in seconds
           });
-          res.json({ success: true, token: 'Bear ' + token });
+          res.json({ success: true, token: 'Bearer ' + token });
         } else {
           res.send({ success: false, message: 'Authentication failed. Passwords did not match.' });
         }
@@ -68,14 +75,11 @@ apiRoutes.post('/authenticate', function(req, res) {
   });
 });
 
-// Protect dashboard route with JWT
 apiRoutes.get('/dashboard', passport.authenticate('jwt', { session: false }), function(req, res) {  
-  res.send('It worked! User id is: ' + req.user._id + '.');
+  res.send('It worked! User id is: ' + req.user.email + '.');
 });
 
-// Set url for API group routes
 app.use('/', apiRoutes);  
-
 // Connect to database
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.listen(8000, () => console.log('Example app listening on port 8000!'));

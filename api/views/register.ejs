@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>register</title>
+</head>
+<body>
+	<div class="row">
+		<div class="col-sm-6">
+			<h1>Inscription</h1>
+			<form class="form-signin" action="/signup" method="POST" accept-charset="utf-8">
+				<input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
+				<input type='password', name='password' class='form-control nomargin' placeholder='Password' required>
+				<input type='email' name='email' class='form-control' placeholder='Email',required>
+				<input type='text' name='firstName' class='form-control' placeholder='First Name' required>
+				<input type='text' name='lastName' class='form-control' placeholder='Last Name' required>
+				<button class='btn btn-lg btn-primary btn-block' type='submit'> Register</button>
+				<span class="clearfix"></span>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

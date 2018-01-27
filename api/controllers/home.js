@@ -3,7 +3,7 @@ const ensureLoggedIn = require('../app/authentication/middleware').ensureLoggedI
 module.exports = function(app) {
 
     app.get('/', ensureLoggedIn ,(req, res) => {
-        res.status(200).send('Welcome')
+        res.render('index');
     })
 
 }
